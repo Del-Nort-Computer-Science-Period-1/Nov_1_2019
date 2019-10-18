@@ -121,8 +121,24 @@
 // Interface Builder for operators buttons
 -(IBAction)plusButton:(id)sender {  // Interface Builder action for plus (+)
     [self saveValueOfOperator:PLUS];
-    [self saveValueOfOperator:MINUS];
+    [self saveValueOfArg1];
+    [self clearCalcAreaLabel];
+}
+
+-(IBAction)multiplyButton:(id)sender {  // Interface Builder action for multiply (*)
     [self saveValueOfOperator:MULTIPLY];
+    [self saveValueOfArg1];
+    [self clearCalcAreaLabel];
+}
+
+-(IBAction)minusButton:(id)sender {  // Interface Builder action for minus (-)
+    [self saveValueOfOperator:MINUS];
+    [self saveValueOfArg1];
+    [self clearCalcAreaLabel];
+}
+
+-(IBAction)squareButton:(id)sender {  // Interface Builder action for minus (-)
+    [self saveValueOfOperator:M_SQRT2];
     [self saveValueOfArg1];
     [self clearCalcAreaLabel];
 }
@@ -139,6 +155,56 @@
     NSString *keyNumber = @"8";
     [self concatCalcAreaLabel:keyNumber];
 }
+
+// Interface Builder actions  for numbers and decimal
+-(IBAction)press7Button:(id)sender {  // Interface Builder action for (7)
+    NSString *keyNumber = @"7";
+    [self concatCalcAreaLabel:keyNumber];
+}
+
+// Interface Builder actions  for numbers and decimal
+-(IBAction)press6Button:(id)sender {  // Interface Builder action for (6)
+    NSString *keyNumber = @"6";
+    [self concatCalcAreaLabel:keyNumber];
+}
+
+// Interface Builder actions  for numbers and decimal
+-(IBAction)press5Button:(id)sender {  // Interface Builder action for (5)
+    NSString *keyNumber = @"5";
+    [self concatCalcAreaLabel:keyNumber];
+}
+
+// Interface Builder actions  for numbers and decimal
+-(IBAction)press4Button:(id)sender {  // Interface Builder action for (4)
+    NSString *keyNumber = @"4";
+    [self concatCalcAreaLabel:keyNumber];
+}
+
+// Interface Builder actions  for numbers and decimal
+-(IBAction)press3Button:(id)sender {  // Interface Builder action for (3)
+    NSString *keyNumber = @"3";
+    [self concatCalcAreaLabel:keyNumber];
+}
+
+// Interface Builder actions  for numbers and decimal
+-(IBAction)press2Button:(id)sender {  // Interface Builder action for (2)
+    NSString *keyNumber = @"2";
+    [self concatCalcAreaLabel:keyNumber];
+}
+
+// Interface Builder actions  for numbers and decimal
+-(IBAction)press1Button:(id)sender {  // Interface Builder action for (1)
+    NSString *keyNumber = @"1";
+    [self concatCalcAreaLabel:keyNumber];
+}
+
+// Interface Builder actions  for numbers and decimal
+-(IBAction)press0Button:(id)sender {  // Interface Builder action for (0)
+    NSString *keyNumber = @"0";
+    [self concatCalcAreaLabel:keyNumber];
+}
+
+
 
 
 /* End Section 2 */
