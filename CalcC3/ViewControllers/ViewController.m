@@ -29,23 +29,34 @@
 /* Section 1: Methods for managing and performing calculation, C style used where practical */
 -(void)calculateAnswer  // method to perform calculation
 {
+    int a = 0; //to determine which number is a squared funtion
     // arg2 = [calcAreaNumber doubleValue];  // Obj-C Class method to convert NSSTRING to double
     arg2 = calcAreaNumber.doubleValue;  // Alternate Java like syntax to convert NSSTRING to double
     switch(mathOp)
     {
         case PLUS:
+            a = 0;
             calcAnswer = arg1 + arg2;
             break;
         case MINUS:
+            a = 0;
             calcAnswer = arg1 - arg2;
             break;
         case DIVIDE:
+            a = 0;
             calcAnswer = arg1 / arg2;
             break;
         case MULTIPLY:
+            a = 0;
+            calcAnswer = arg1 * arg2;
+            break;
+        case SQUARE:
+            a = 1;
+            arg2 = arg1;
             calcAnswer = arg1 * arg2;
             break;
         case MODULO:
+            a = 0;
             calcAnswer = (double)((int)arg1 % (int)arg2);
             break;
         case -1:
@@ -138,7 +149,7 @@
 }
 
 -(IBAction)squareButton:(id)sender {  // Interface Builder action for minus (-)
-    [self saveValueOfOperator:M_SQRT2];
+    [self saveValueOfOperator:SQUARE];
     [self saveValueOfArg1];
     [self clearCalcAreaLabel];
 }

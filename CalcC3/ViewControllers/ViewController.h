@@ -14,7 +14,7 @@
 #define MULTIPLY 2
 #define DIVIDE 3
 #define MODULO 4
-#define M_SQRT2 5
+#define SQUARE 5
 
 @interface ViewController : UIViewController
 /* Section 1: Classic C style variables to support calculation */

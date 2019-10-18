@@ -101,13 +101,10 @@
 		8236613B2358C21D00E1CE2C /* CalcC3 */ = {
 			isa = PBXGroup;
 			children = (
-				8236613C2358C21D00E1CE2C /* AppDelegate.h */,
-				8236613D2358C21D00E1CE2C /* AppDelegate.m */,
-				8236613F2358C21D00E1CE2C /* ViewController.h */,
-				823661402358C21D00E1CE2C /* ViewController.m */,
-				823661422358C21D00E1CE2C /* Main.storyboard */,
+				82473219235A159800B90144 /* ViewControllers */,
+				82473217235A156000B90144 /* Models */,
+				82473218235A157300B90144 /* Views */,
 				823661452358C21E00E1CE2C /* Assets.xcassets */,
-				823661472358C21E00E1CE2C /* LaunchScreen.storyboard */,
 				8236614A2358C21E00E1CE2C /* Info.plist */,
 				8236614B2358C21E00E1CE2C /* main.m */,
 			);
@@ -130,6 +127,33 @@
 				823661622358C21E00E1CE2C /* Info.plist */,
 			);
 			path = CalcC3UITests;
+			sourceTree = "<group>";
+		};
+		82473217235A156000B90144 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8236613C2358C21D00E1CE2C /* AppDelegate.h */,
+				8236613D2358C21D00E1CE2C /* AppDelegate.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		82473218235A157300B90144 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				823661422358C21D00E1CE2C /* Main.storyboard */,
+				823661472358C21E00E1CE2C /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		82473219235A159800B90144 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8236613F2358C21D00E1CE2C /* ViewController.h */,
+				823661402358C21D00E1CE2C /* ViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
