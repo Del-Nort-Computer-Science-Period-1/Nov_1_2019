@@ -29,34 +29,34 @@
 /* Section 1: Methods for managing and performing calculation, C style used where practical */
 -(void)calculateAnswer  // method to perform calculation
 {
-    int a = 0; //to determine which number is a squared funtion
+//    int a1 = 0; //to determine which number is a squared funtion
     // arg2 = [calcAreaNumber doubleValue];  // Obj-C Class method to convert NSSTRING to double
     arg2 = calcAreaNumber.doubleValue;  // Alternate Java like syntax to convert NSSTRING to double
     switch(mathOp)
     {
         case PLUS:
-            a = 0;
+ //           a1 = 0;
             calcAnswer = arg1 + arg2;
             break;
         case MINUS:
-            a = 0;
+///            a1 = 0;
             calcAnswer = arg1 - arg2;
             break;
         case DIVIDE:
-            a = 0;
+//            a1 = 0;
             calcAnswer = arg1 / arg2;
             break;
         case MULTIPLY:
-            a = 0;
+ //           a1 = 0;
             calcAnswer = arg1 * arg2;
             break;
         case SQUARE:
-            a = 1;
+//            a1 = 1 ;
             arg2 = arg1;
             calcAnswer = arg1 * arg2;
             break;
         case MODULO:
-            a = 0;
+//            a1 = 0;
             calcAnswer = (double)((int)arg1 % (int)arg2);
             break;
         case -1:
@@ -68,17 +68,17 @@
     // arg1 = [calcAreaNumber doubleValue];  // Obj-C Class method to convert NSSTRING to double
     arg1 = calcAreaNumber.doubleValue;  // Alternate Java like syntax to convert NSSTRING to double
 }
-
 -(void)saveValueofAnswer {  // method to save value of answer after calc to arg1
     mathOp = -1;          // operator is unassigned after calc
     arg1 = calcAnswer;      // arg1 is current display value
     arg2 = 0.0;             // arg2 is now unassigned
+
 }
 
 -(void)saveValueOfOperator:(int)opNumber {  // method to retain value of operator
     mathOp = opNumber;
 }
-
+	
 -(void)clearCalculator {                    // method to clear values of calculator
     mathOp = -1;
     arg1 = 0.0;
@@ -148,10 +148,28 @@
     [self clearCalcAreaLabel];
 }
 
--(IBAction)squareButton:(id)sender {  // Interface Builder action for minus (-)
-    [self saveValueOfOperator:SQUARE];
+-(IBAction)minusDivide:(id)sender {  // Interface Builder action for divide (/)
+    [self saveValueOfOperator:DIVIDE];
     [self saveValueOfArg1];
     [self clearCalcAreaLabel];
+}
+
+-(IBAction)squareButton:(id)sender {  // Interface Builder action for square (^2)
+    [self saveValueOfOperator:SQUARE];
+    [self saveValueOfArg1];
+//    [self clearCalcAreaLabel];
+    
+    // perform calculation
+    [self calculateAnswer];
+    
+    // set and display result
+    [self setCalcAreaNumber:[NSString stringWithFormat:@"%f", calcAnswer]];  // float (double) to string
+    [self setTextCalcAreaLabel];
+    
+    // set values to support continued calculations, but wipe if you type a number
+    [self saveValueofAnswer];                   // answer -> arg1
+    [self setInitialCalcAreaInputState:true];   // number key typing will wipe value
+
 }
 
 
