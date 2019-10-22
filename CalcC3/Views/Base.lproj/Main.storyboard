@@ -208,7 +208,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="multiplyButton:" destination="BYZ-38-t0r" eventType="touchDragInside" id="fxO-qh-uOf"/>
+                                    <action selector="multiplyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ydc-Ob-8mC"/>
                                 </connections>
                             </button>
                         </subviews>
