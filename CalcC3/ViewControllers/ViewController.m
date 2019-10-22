@@ -116,7 +116,7 @@
     [self calculateAnswer];
     
     // set and display result
-    [self setCalcAreaNumber:[NSString stringWithFormat:@"%f", calcAnswer]];  // float (double) to string
+    [self setCalcAreaNumber:[NSString stringWithFormat:@"%.2f", calcAnswer]];  // float (double) to string
     [self setTextCalcAreaLabel];
     
     // set values to support continued calculations, but wipe if you type a number
@@ -163,7 +163,7 @@
     [self calculateAnswer];
     
     // set and display result
-    [self setCalcAreaNumber:[NSString stringWithFormat:@"%f", calcAnswer]];  // float (double) to string
+    [self setCalcAreaNumber:[NSString stringWithFormat:@"%.2f", calcAnswer]];  // float (double) to string
     [self setTextCalcAreaLabel];
     
     // set values to support continued calculations, but wipe if you type a number
