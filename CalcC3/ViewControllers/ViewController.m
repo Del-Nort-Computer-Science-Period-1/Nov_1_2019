@@ -233,7 +233,11 @@
     [self concatCalcAreaLabel:keyNumber];
 }
 
-
+// Interface Builder actions  for numbers and decimal
+-(IBAction)pressDotButton:(id)sender {  // Interface Builder action for (.)
+    NSString *keyNumber = @".";
+    [self concatCalcAreaLabel:keyNumber];
+}
 
 
 /* End Section 2 */
